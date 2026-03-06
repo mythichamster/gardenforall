@@ -78,6 +78,13 @@ web_modules/
 .next
 out
 
+# Next.js auto-generated type file
+next-env.d.ts
+
+# Design assets (large files, not source code)
+*.pdf
+*.png
+
 # Nuxt.js build / generate output
 .nuxt
 dist
