@@ -10,6 +10,9 @@ const lexend = Lexend({
 })
 
 export const metadata: Metadata = {
+  icons: {
+    icon: '/images/favicon.svg',
+  },
   title: 'GardenForAll — Personalized Gardens for the Bay Area',
   description:
     'Transform your outdoor space with a personalized garden. We handle design, installation, and maintenance so you can simply enjoy. Serving the San Francisco Bay Area.',
@@ -25,7 +28,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'GardenForAll — Personalized Gardens for the Bay Area',
-    description: 'Sprinkle magic, cultivate joy. We design and install beautiful gardens tailored to your space.',
+    description: 'We design and install beautiful gardens tailored to your space.',
     url: 'https://gardenforall.com',
     siteName: 'GardenForAll',
     type: 'website',

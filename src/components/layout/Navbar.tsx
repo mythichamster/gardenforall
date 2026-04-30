@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Button from '@/components/ui/Button'
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Services', href: '/#services' },
   { label: 'FAQs', href: '/faq' },
   { label: 'Contact', href: '/contact' },
 ]
@@ -22,19 +22,13 @@ export default function Navbar() {
   }, [])
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || menuOpen
-          ? 'bg-white/95 backdrop-blur-sm shadow-sm'
-          : 'bg-transparent'
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex flex-col leading-tight">
+          <Link href="/" className="flex items-center gap-2">
+            <Image src="/images/favicon.svg" alt="GardenForAll logo" width={32} height={32} />
             <span className="text-xl font-semibold text-forest">GardenForAll</span>
-            <span className="text-xs text-sage hidden sm:block">Sprinkle magic, Cultivate joy</span>
           </Link>
 
           {/* Desktop nav */}
@@ -51,8 +45,8 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden md:block">
-            <Button href="/builder/plant" size="sm">
-              Get Started
+            <Button href="/contact" size="sm">
+              Contact Us
             </Button>
           </div>
 
@@ -90,8 +84,8 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="pt-2">
-              <Button href="/builder/plant" size="sm" fullWidth onClick={() => setMenuOpen(false)}>
-                Get Started
+              <Button href="/contact" size="sm" fullWidth onClick={() => setMenuOpen(false)}>
+                Contact Us
               </Button>
             </div>
           </nav>

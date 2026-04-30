@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        forest: '#2D5016',
-        sage: '#7B9E5E',
-        mint: '#E8F5E0',
-        cream: '#FAF8F3',
-        soil: '#5C3D2E',
+        forest: '#111111',
+        sage: '#666666',
+        mint: '#eeeeee',
+        cream: '#f8f8f8',
+        soil: '#444444',
         charcoal: '#1C1C1C',
       },
       fontFamily: {

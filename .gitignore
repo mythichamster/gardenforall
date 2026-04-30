@@ -83,7 +83,9 @@ next-env.d.ts
 
 # Design assets (large files, not source code)
 *.pdf
-*.png
+
+# macOS metadata
+.DS_Store
 
 # Nuxt.js build / generate output
 .nuxt

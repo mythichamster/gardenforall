@@ -12,13 +12,13 @@ export default function Partners() {
             <span className="text-2xl font-bold tracking-tight text-charcoal/60 font-lexend">
               INTERO
             </span>
-            <span className="text-xs text-charcoal/30">Real Estate Services</span>
+            <span className="text-xs text-charcoal/30">A Berkshire Hathaway Affiliate</span>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <span className="text-2xl font-bold tracking-tight text-charcoal/60">
-              B<span className="text-lg">W</span>
+            <span className="text-2xl font-bold tracking-tight text-charcoal/60 font-lexend">
+              Proven Winners
             </span>
-            <span className="text-xs text-charcoal/30">Design & Architecture</span>
+            <span className="text-xs text-charcoal/30">Garden Supply</span>
           </div>
         </div>
       </div>

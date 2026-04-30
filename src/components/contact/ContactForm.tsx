@@ -8,6 +8,17 @@ const serviceAreas = [
   'Sunnyvale', 'Cupertino', 'Los Altos', 'Other Bay Area',
 ]
 
+const referralSources = [
+  'Google Search',
+  'Instagram',
+  'Facebook',
+  'Nextdoor',
+  'Friend or Neighbor',
+  'Yelp',
+  'Local Event',
+  'Other',
+]
+
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
   const [form, setForm] = useState({
@@ -16,6 +27,8 @@ export default function ContactForm() {
     phone: '',
     area: '',
     service: '',
+    referral: '',
+    referralOther: '',
     message: '',
   })
 
@@ -132,6 +145,43 @@ export default function ContactForm() {
           <option value="unsure">Not Sure Yet</option>
         </select>
       </div>
+
+      <div>
+        <label htmlFor="referral" className="block text-sm font-medium text-charcoal mb-1.5">
+          How did you hear about us? *
+        </label>
+        <select
+          id="referral"
+          name="referral"
+          required
+          value={form.referral}
+          onChange={handleChange}
+          className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-charcoal focus:outline-none focus:ring-2 focus:ring-forest/30 focus:border-forest transition"
+        >
+          <option value="">Select an option…</option>
+          {referralSources.map((s) => (
+            <option key={s} value={s}>{s}</option>
+          ))}
+        </select>
+      </div>
+
+      {form.referral === 'Other' && (
+        <div>
+          <label htmlFor="referralOther" className="block text-sm font-medium text-charcoal mb-1.5">
+            Please specify *
+          </label>
+          <input
+            id="referralOther"
+            name="referralOther"
+            type="text"
+            required
+            value={form.referralOther}
+            onChange={handleChange}
+            placeholder="Where did you hear about us?"
+            className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-charcoal placeholder:text-charcoal/30 focus:outline-none focus:ring-2 focus:ring-forest/30 focus:border-forest transition"
+          />
+        </div>
+      )}
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-1.5">
