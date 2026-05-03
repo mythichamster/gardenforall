@@ -5,8 +5,8 @@ export default function Hero() {
   return (
     <div>
       {/* Text section — sticky and transparent so image scrolls up behind it */}
-      <section className="sticky top-0 z-10 min-h-screen flex items-center justify-center">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center pt-16">
+      <section className="z-10 flex items-center justify-center portrait:bg-white landscape:sticky landscape:top-0 landscape:min-h-screen">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center pt-16 portrait:pt-24 portrait:pb-8">
           <div className="inline-flex items-center gap-2 bg-white/90 border border-black/10 rounded-full px-4 py-2 mb-8">
             <span className="text-sm font-medium text-charcoal">Serving the San Francisco Bay Area</span>
           </div>
@@ -32,7 +32,7 @@ export default function Hero() {
       </section>
 
       {/* Image section — scrolls up behind the sticky text */}
-      <section className="relative z-0 h-screen">
+      <section className="relative z-0 w-full aspect-video landscape:min-h-screen">
         <Image
           src="/images/hero.png"
           alt="Beautiful lush garden with colorful flowers"
