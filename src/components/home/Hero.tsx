@@ -20,7 +20,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg sm:text-xl text-charcoal max-w-2xl mx-auto mb-10">
-            Answer a few questions about your style. We handle design, installation, and a full year of care so it stays alive — guaranteed.
+            Answer a few questions about your style. We handle design, installation, and maintenance. You simply enjoy your garden.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
