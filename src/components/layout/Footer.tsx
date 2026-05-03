@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import Logo from '@/components/ui/Logo'
 
 const footerLinks = [
   { label: 'Home', href: '/' },
@@ -14,9 +14,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Image src="/images/favicon.svg" alt="GardenForAll logo" width={32} height={32} className="invert" />
-              <span className="text-xl font-semibold">GardenForAll</span>
+            <div className="mb-4">
+              <Logo invert />
             </div>
             <p className="text-sm text-white/70 max-w-xs">
               Personalized garden design and installation for the San Francisco Bay Area.
